@@ -1,14 +1,14 @@
-"use strict";
+'use strict';
 
-const Fizz = 3;
-const Buzz = 5;
+const japanCapital = '東京';
+let inputCapital;
 
-for (let i = 1; i <= 99; i++) {
-  if (i % Fizz === 0 && i % Buzz === 0) {
-    console.log(`FizzBuzz${i}`);
-  } else if (i % Buzz === 0) {
-    console.log(`Buzz${i}`);
-  } else if (i % Fizz === 0) {
-    console.log(`Fizz${i}`);
+while (inputCapital !== japanCapital) {
+  inputCapital = prompt('日本の首都は?');
+  if (inputCapital === japanCapital) {
+    alert('正解です!');
+    break;
+  } else {
+    alert('不正解です!');
   }
 }
