@@ -1,14 +1,24 @@
 'use strict';
 
-const japanCapital = '東京';
-let inputCapital;
+function outBorder() {
+  console.log('========================');
+}
+const getOut = '終了';
 
-while (inputCapital !== japanCapital) {
-  inputCapital = prompt('日本の首都は?');
-  if (inputCapital === japanCapital) {
-    alert('正解です!');
-    break;
-  } else {
-    alert('不正解です!');
+const tasks = ['掃除', '買い物', '散歩'];
+let task;
+while (task !== getOut) {
+  outBorder();
+  console.log('現在持っているタスク一覧');
+  outBorder();
+  for (let i = 0; i < tasks.length; i++) {
+    console.log(`${i} : ${tasks[i]}`);
   }
+  task = prompt('タスクを入力してください。');
+  if (task !== getOut) {
+    alert('新しいタスクを追加しました。');
+  } else if (task === getOut) {
+    break;
+  }
+  tasks.push(task);
 }
