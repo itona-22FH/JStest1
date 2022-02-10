@@ -1,7 +1,6 @@
 'use strict';
 
 const tasks = ['掃除', '買い物', '散歩'];
-let addTask;
 
 const title = () => {
   console.log('========================');
