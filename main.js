@@ -1,25 +1,27 @@
 'use strict';
 
-const tasks = ['掃除', '買い物', '散歩'];
+const tasks = [
+  { task: '机を片付ける', genre: '掃除' },
+  { task: '牛乳を買う', genre: '買い物' },
+  { task: '散歩する', genre: '運動' },
+];
 
-const title = () => {
-  console.log('========================');
-  console.log('現在持っているタスク一覧');
-  console.log('========================');
-};
+const title =
+  '========================\n現在持っているタスク一覧\n========================';
 
-const arryToProcess = (arry) => {
-  arry.forEach((value, index) => {
-    console.log(`${index} : ${value}`);
+const showTasks = () => {
+  tasks.forEach((value, index) => {
+    console.log(`${index} : [内容]${value.task}、[ジャンル]${value.genre}`);
   });
 };
 
-title();
-arryToProcess(tasks);
+console.log(title);
+showTasks();
 
 let inputTask = prompt('タスクを入力してください');
-tasks.push(inputTask);
+let inputGenre = prompt('ジャンルを入力してください');
+tasks.push({ task: inputTask, genre: inputGenre });
 alert('タスクを追加しました');
 
-title();
-arryToProcess(tasks);
+console.log(title);
+showTasks();
