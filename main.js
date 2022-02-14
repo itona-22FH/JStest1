@@ -12,11 +12,11 @@ const showTasks = () => {
 };
 
 console.log(title);
-showTasks(tasks);
+showTasks();
 
 let inputTask = prompt('タスクを入力してください');
 tasks.push(inputTask);
 alert('タスクを追加しました');
 
 console.log(title);
-showTasks(tasks);
+showTasks();
