@@ -1,14 +1,22 @@
 'use strict';
 
-const japanCapital = '東京';
-let inputCapital;
+const tasks = ['掃除', '買い物', '散歩'];
 
-while (inputCapital !== japanCapital) {
-  inputCapital = prompt('日本の首都は?');
-  if (inputCapital === japanCapital) {
-    alert('正解です!');
-    break;
-  } else {
-    alert('不正解です!');
-  }
-}
+const title =
+  '========================\n現在持っているタスク一覧\n========================';
+
+const showTasks = () => {
+  tasks.forEach((value, index) => {
+    console.log(`${index} : ${value}`);
+  });
+};
+
+console.log(title);
+showTasks();
+
+let inputTask = prompt('タスクを入力してください');
+tasks.push(inputTask);
+alert('タスクを追加しました');
+
+console.log(title);
+showTasks();
