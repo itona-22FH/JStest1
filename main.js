@@ -1,6 +1,6 @@
 'use strict';
 
-let tasks = [
+const tasks = [
   { task: '机を片付ける', genre: '掃除' },
   { task: '牛乳を買う', genre: '買い物' },
   { task: '散歩する', genre: '運動' },
